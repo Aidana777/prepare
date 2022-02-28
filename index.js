@@ -5,28 +5,39 @@ messagebtn.onclick = () => {
     messageP.textContent = inputMessage.value
     inputMessage.value = innerHTML
 }
+const listtext = document.querySelector(".list-text")
 const myList = ["mouse", "abc", "keyboard", "screen", "touchpad"];
+let temp=[];
 for(let i=0;i<myList.length;i++){
- let temp=[]
- if(myList/2===0){
-     myList.push(temp)
+
+ if(myList[i]%2===0){
+     temp.push()
  }
-return temp
+
 }
-console.log(temp)
+
 const listMenu = document.querySelector(".list")
 const listMenuli = document.querySelector("li")
 console.log(listMenuli)
 listMenu.append(listMenuli)
 listMenuli.textContent = myList[0]
+const first=document.createElement("li")
+const second=document.createElement("li")
+const treeth=document.createElement("li")
+const fourt=document.createElement("li")
+listMenu.append(first,second,treeth,fourt)
+first.textContent=myList[1]
+second.textContent=myList[2]
+treeth.textContent=myList[3]
+fourt.textContent=myList[4]
 
-const listtext = document.querySelector(".list-text")
 const nameInput = document.querySelector("#nameInput")
 const nameBtn = document.querySelector("#nameBtn")
-console.log(nameBtn)
 
-nameBtn.onclick = () => {
+
+nameInput.oninput = () => {
     if (nameInput.value.length>=7) {
-        nameBtn.disabled=true;
+        nameBtn.disabled=false
+        
     }
 }
