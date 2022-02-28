@@ -7,37 +7,38 @@ messagebtn.onclick = () => {
 }
 const listtext = document.querySelector(".list-text")
 const myList = ["mouse", "abc", "keyboard", "screen", "touchpad"];
-let temp=[];
-for(let i=0;i<myList.length;i++){
+let tempArr = [];
+for (let i = 0; i < myList.length; i++) {
 
- if(myList[i]%2===0){
-     temp.push()
- }
+    if (myList[i].length % 2 === 0) {
+     tempArr.push(myList[i])
+    }
 
 }
-
+console.log(tempArr)
+listtext.textContent=tempArr
 const listMenu = document.querySelector(".list")
 const listMenuli = document.querySelector("li")
 console.log(listMenuli)
 listMenu.append(listMenuli)
 listMenuli.textContent = myList[0]
-const first=document.createElement("li")
-const second=document.createElement("li")
-const treeth=document.createElement("li")
-const fourt=document.createElement("li")
-listMenu.append(first,second,treeth,fourt)
-first.textContent=myList[1]
-second.textContent=myList[2]
-treeth.textContent=myList[3]
-fourt.textContent=myList[4]
+const first = document.createElement("li")
+const second = document.createElement("li")
+const treeth = document.createElement("li")
+const fourt = document.createElement("li")
+listMenu.append(first, second, treeth, fourt)
+first.textContent = myList[1]
+second.textContent = myList[2]
+treeth.textContent = myList[3]
+fourt.textContent = myList[4]
 
 const nameInput = document.querySelector("#nameInput")
 const nameBtn = document.querySelector("#nameBtn")
 
 
 nameInput.oninput = () => {
-    if (nameInput.value.length>=7) {
-        nameBtn.disabled=false
-        
+    if (nameInput.value.length >= 7) {
+        nameBtn.disabled = false
+
     }
 }
